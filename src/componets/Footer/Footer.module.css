@@ -1,0 +1,101 @@
+.footer {
+  width: 100%;
+  padding: 56px 0 32px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.inner {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 28px;
+}
+
+.brand {
+  max-width: 260px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+}
+
+.tagline {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cols {
+  display: flex;
+  gap: 48px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.colTitle {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.col a,
+.col span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+
+.col a:hover {
+  color: rgba(255, 196, 140, 0.9);
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.sep {
+  opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+  .top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cols {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cols {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}

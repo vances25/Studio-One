@@ -1,0 +1,85 @@
+.aftercare {
+  width: 100%;
+  padding: 70px 0 90px;
+}
+
+.inner {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 520px;
+  margin-bottom: 34px;
+}
+
+.kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255, 196, 140, 0.9);
+  margin-bottom: 6px;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  letter-spacing: -0.4px;
+}
+
+.sub {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.55;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.card li {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.note {
+  margin-top: 26px;
+  max-width: 620px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

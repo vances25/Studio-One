@@ -1,0 +1,167 @@
+.wrapper {
+  position: relative;
+  padding: 18px 0;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.92);
+  background: radial-gradient(
+      1200px 700px at 20% 0%,
+      rgba(255, 196, 140, 0.10),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 600px at 85% 20%,
+      rgba(255, 196, 140, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0b0f14 0%, #070a0e 100%);
+}
+
+/* subtle grain overlay */
+.wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: radial-gradient(
+      circle at 10% 10%,
+      rgba(255, 255, 255, 0.08) 0 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(255, 255, 255, 0.06) 0 1px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 30% 70%,
+      rgba(255, 255, 255, 0.05) 0 1px,
+      transparent 2px
+    );
+  background-size: 160px 160px;
+  mix-blend-mode: overlay;
+  filter: blur(0.2px);
+}
+
+/* Top nav container */
+.nav {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 10px 14px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+  user-select: none;
+}
+
+.brandMark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 196, 140, 0.95),
+    rgba(255, 196, 140, 0.55)
+  );
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.brandMark::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: 7px;
+  border: 1px solid rgba(12, 12, 12, 0.55);
+}
+
+.brandText {
+  font-weight: 650;
+  letter-spacing: 0.3px;
+}
+
+/* Links */
+.links {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.links a:hover {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.ghostBtn {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.82);
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ghostBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.primaryBtn {
+  text-decoration: none;
+  color: rgba(12, 12, 12, 0.95);
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 196, 140, 0.92);
+  border: 1px solid rgba(255, 196, 140, 0.25);
+  font-weight: 650;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+}
+
+/* Responsive: hide middle links on smaller screens */
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav {
+    padding: 10px 10px;
+  }
+  .ghostBtn {
+    display: none;
+  }
+}
