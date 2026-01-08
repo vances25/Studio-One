@@ -1,6 +1,6 @@
 .booking {
   width: 100%;
-  padding: 80px 0 96px;
+  padding: 36px 0 64px;
 }
 
 .inner {
@@ -10,7 +10,7 @@
 
 .header {
   max-width: 680px;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
 }
 
 .kicker {
@@ -19,18 +19,21 @@
   letter-spacing: 0.18em;
   font-weight: 700;
   color: rgba(255, 196, 140, 0.9);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .title {
-  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  font-size: clamp(1.7rem, 3.2vw, 2.35rem);
   margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.12;
 }
 
 .sub {
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.5;
   margin: 0;
+  max-width: 60ch;
 }
 
 .layout {
@@ -44,22 +47,22 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
-  padding: 28px;
+  padding: 24px;
   backdrop-filter: blur(10px);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  margin-bottom: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .form input,
@@ -88,7 +91,7 @@
 
 .form textarea {
   resize: vertical;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .footer {
@@ -111,22 +114,24 @@
   font-weight: 750;
   border: none;
   cursor: pointer;
+  transition: transform 120ms ease, filter 120ms ease;
 }
 
 .submit:hover {
   transform: translateY(-1px);
+  filter: brightness(1.02);
 }
 
 .contactCard {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
-  padding: 22px;
+  padding: 20px;
   backdrop-filter: blur(10px);
 }
 
 .contactTop {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .contactKicker {
@@ -160,7 +165,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 12px;
 }
 
 .contactItem {
@@ -196,14 +201,14 @@
 }
 
 .contactNote {
-  margin-top: 14px;
+  margin-top: 12px;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.5;
 }
 
 .contactCta {
-  margin-top: 16px;
+  margin-top: 12px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -225,20 +230,47 @@
 }
 
 @media (max-width: 900px) {
+  .booking {
+    padding: 26px 0 56px;
+  }
+
+  .header {
+    margin-bottom: 14px;
+  }
+
   .layout {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form {
+    padding: 18px;
   }
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 
   .row {
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 
   .footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .booking {
+    padding: 22px 0 48px;
+  }
+
+  .contactCard {
+    padding: 18px;
   }
 }

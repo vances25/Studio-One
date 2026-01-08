@@ -1,8 +1,6 @@
-/* src/componets/Pricing/Pricing.module.css */
-
 .pricing {
   width: 100%;
-  padding: 72px 0 88px;
+  padding: 32px 0 44px;
 }
 
 .inner {
@@ -14,8 +12,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 28px;
+  gap: 14px;
+  margin-bottom: 10px;
 }
 
 .header {
@@ -28,12 +26,12 @@
   letter-spacing: 0.18em;
   font-weight: 750;
   color: rgba(255, 196, 140, 0.9);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .title {
-  margin: 0 0 10px;
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 3.0vw, 2.3rem);
   line-height: 1.12;
   letter-spacing: -0.4px;
   color: rgba(255, 255, 255, 0.92);
@@ -49,8 +47,8 @@
 .pill {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
+  gap: 10px;
+  padding: 10px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.09);
@@ -70,7 +68,7 @@
 }
 
 .pillValue {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.88);
 }
@@ -85,20 +83,21 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .card {
   border-radius: 22px;
-  padding: 18px;
+  padding: 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.09);
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
-  min-height: 320px;
+  min-height: 300px;
 }
 
 .featured {
@@ -112,8 +111,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .cardTitleRow {
@@ -124,7 +123,7 @@
 
 .cardTitle {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.92);
 }
@@ -145,7 +144,7 @@
   margin: 6px 0 0;
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.45;
-  max-width: 28ch;
+  max-width: 32ch;
 }
 
 .price {
@@ -157,7 +156,7 @@
 }
 
 .priceValue {
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.92);
   letter-spacing: -0.3px;
@@ -171,7 +170,7 @@
 .list {
   list-style: none;
   padding: 0;
-  margin: 10px 0 16px;
+  margin: 10px 0 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -231,7 +230,7 @@
 }
 
 .finePrint {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .fineLine {
@@ -245,6 +244,8 @@
   .top {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
   }
 
   .pill {
@@ -253,6 +254,8 @@
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 10px;
   }
 
   .card {
