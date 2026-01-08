@@ -1,3 +1,4 @@
+// Hero.tsx
 import Image from "next/image";
 import styles from "./Hero.module.css";
 
@@ -54,7 +55,7 @@ export default function Hero() {
               height={1750}
               priority
               className={styles.image}
-              sizes="(max-width: 900px) 92vw, 520px"
+              sizes="(max-width: 900px) 92vw, 640px"
             />
           </div>
         </div>
